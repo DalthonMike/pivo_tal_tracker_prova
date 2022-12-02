@@ -1,19 +1,23 @@
 var produtos = [
     {
         nome: 'cerveja',
-        categoria: 'bebida'
+        categoria: 'bebida',
+        valor: 7
     },
     {
         nome: 'suco',
-        categoria: 'bebida'
+        categoria: 'bebida',
+        valor: 3
     },
     {
-        nome: 'joelho',
-        categoria: 'salgado'
+        nome: 'coxinha',
+        categoria: 'salgado',
+        valor: 4
     },
     {
         nome: 'pastel',
-        categoria: 'salgado'
+        categoria: 'salgado',
+        valor: 5
     }
 ]
 
@@ -24,4 +28,12 @@ function listar_por_categoria(categoria) {
     return produtosFiltrados;
 }
 
-listar_por_categoria('bijuteria');
+listar_por_categoria('bebida');
+
+function listar_por_valor(valorMinimo, valorMaximo) {
+    let produtosFiltrados = []
+    produtosFiltrados = produtos.filter(produto => (produto.valor < valorMaximo && produto.valor > valorMinimo));
+    console.log(produtosFiltrados);
+}
+
+listar_por_valor(1, 5);
