@@ -34,6 +34,7 @@ function listar_por_valor(valorMinimo, valorMaximo) {
     let produtosFiltrados = []
     produtosFiltrados = produtos.filter(produto => (produto.valor < valorMaximo && produto.valor > valorMinimo));
     console.log(produtosFiltrados);
+    return produtosFiltrados;
 }
 
 listar_por_valor(1, 5);
